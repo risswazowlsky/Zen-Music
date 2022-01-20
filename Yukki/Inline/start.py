@@ -31,12 +31,12 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="⚡ Helper Commands Menu", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔧 Settings", callback_data="settingm"
+                    text="🤚 Settings", callback_data="settingm"
                 )
             ],
         ]
@@ -45,17 +45,17 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="⚡ Helper Commands Menu", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔧 Settings", callback_data="settingm"
+                    text="🤚 Settings", callback_data="settingm"
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                    text="✨Support Group✨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -64,17 +64,17 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="⚡ Helper Commands Menu", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔧 Settings", callback_data="settingm"
+                    text="🤚 Settings", callback_data="settingm"
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                    text="✨Official Channel✨", url=f"{SUPPORT_CHANNEL}"
                 ),
             ],
         ]
@@ -83,20 +83,20 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="⚡ Helper Commands Menu", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔧 Settings", callback_data="settingm"
+                    text="🤚 Settings", callback_data="settingm"
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                    text="✨Official Channel✨", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                    text="✨Support Group✨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -108,7 +108,7 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="⚡ Helper Commands Menu", callback_data="shikhar"
                 ),
             ],
             [
@@ -123,7 +123,7 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="⚡ Helper Commands Menu", callback_data="shikhar"
                 ),
             ],
             [
@@ -134,7 +134,7 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                    text="✨Support Group✨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -143,7 +143,7 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="⚡ Helper Commands Menu", callback_data="shikhar"
                 ),
             ],
             [
@@ -154,7 +154,7 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                    text="✨Official Channel✨", url=f"{SUPPORT_CHANNEL}"
                 ),
             ],
         ]
@@ -163,7 +163,7 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="⚡ Helper Commands Menu", callback_data="shikhar"
                 ),
             ],
             [
@@ -174,10 +174,10 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                    text="✨Official Channel✨", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                    text="✨Support Group✨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
