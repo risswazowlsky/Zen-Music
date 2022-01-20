@@ -229,9 +229,9 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""Hello ,
-My name is {BOT_NAME}.
-A Telegram Music+Video Streaming bot with some useful features.
+home_text_pm = f"""Hello thanks for using {BOT_NAME},
+{BOT_NAME} is a bot for play or listening Music in Groups.
+If u need some help or problem contact @ZenxMato.
 
 All commands can be used with: / """
 
@@ -373,7 +373,7 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name},
+        """Hello {first_name} thanks for using Genius Music❗,
 
 Click on the buttons for more information.
 
