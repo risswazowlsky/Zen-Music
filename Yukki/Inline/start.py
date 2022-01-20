@@ -171,6 +171,9 @@ def private_panel():
                     "➕ Add me to your Group",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 )
+                InlineKeyboardButton(
+                    "💀 Owner",
+                    url=f"https://t.me/ZenxMato",
             ],
             [
                 InlineKeyboardButton(
