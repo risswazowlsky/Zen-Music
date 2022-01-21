@@ -33,6 +33,10 @@ if str(getenv("SUPPORT_GROUP")).strip() == "":
     SUPPORT_GROUP = None
 else:
     SUPPORT_GROUP = str(getenv("SUPPORT_GROUP"))
+if star(getenv("OWNER_BOT")).strip() == "":
+    OWNER_BOT = None
+else:
+    OWNER_BOT = str(getenv("OWNER_BOT"))
 
 
 if str(getenv("STRING_SESSION1")).strip() == "":
