@@ -1,7 +1,7 @@
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaPhoto, Message)
 
-from config import MUSIC_BOT_NAME, SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import MUSIC_BOT_NAME, SUPPORT_CHANNEL, SUPPORT_GROUP, OWNER_BOT
 from Yukki import BOT_USERNAME
 
 
@@ -159,11 +159,11 @@ def private_panel():
             ],
         ]
         return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
-    if SUPPORT_CHANNEL and SUPPORT_GROUP:
+    if SUPPORT_CHANNEL, SUPPORT_GROUP, and OWNER_BOT:
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="⚡ Helper Commands Menu", callback_data="shikhar"
+                    text="💡 Help Menu", callback_data="shikhar"
                 ),
             ],
             [
@@ -174,10 +174,15 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="✨Official Channel✨", url=f"{SUPPORT_CHANNEL}"
+                    text="🤠 OWNER", url=f"{OWNER_BOT}"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="➕ Channel", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="✨Support Group✨", url=f"{SUPPORT_GROUP}"
+                    text="➕ Group", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
