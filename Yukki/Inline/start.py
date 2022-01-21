@@ -174,6 +174,7 @@ def private_panel():
                 InlineKeyboardButton(
                     "💀 Owner",
                     url=f"https://t.me/ZenxMato",
+                ),
             ],
             [
                 InlineKeyboardButton(
