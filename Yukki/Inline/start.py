@@ -174,11 +174,6 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="🤠 OWNER", url=f"{OWNER_BOT}"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
                     text="➕ Channel", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
