@@ -159,7 +159,7 @@ def private_panel():
             ],
         ]
         return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
-    if SUPPORT_CHANNEL, SUPPORT_GROUP, and OWNER_BOT:
+    if SUPPORT_CHANNEL, SUPPORT_GROUP, OWNER_BOT:
         buttons = [
             [
                 InlineKeyboardButton(
