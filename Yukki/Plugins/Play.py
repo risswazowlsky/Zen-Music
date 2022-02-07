@@ -169,7 +169,7 @@ async def play(_, message: Message):
             await message.reply_photo(
                 photo="Utils/IMG_20220207_221016_236.jpg",
                 caption=(
-                    "**Usage:** /play [Music Name or Youtube Link or Reply to Audio]\n\n__[☕Contact Owner]__(https://t.me/zenzuzu2)"
+                    "**Usage:** /play [Nama Lagu]\n\n__*JANGAN SPAM PLAY YA!*__
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
