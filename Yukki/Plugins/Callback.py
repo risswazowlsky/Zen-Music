@@ -167,7 +167,7 @@ async def admin_risghts(_, CallbackQuery):
                 final_output = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>✨__Skipped Voice Chat__</b>\n\n🏷️<b>__NAMA:__</b> {title} \n💡<b>__Durasi:__</b> {duration_min} \n🎧<b>__Permintaan:__ </b> {mention}\n\n<b>__[Bot Eror? Contact Here!](https://t.me/zenzuzu2)__</b>",
+                    caption=f"<b>✨__Skipped Voice Chat__</b>\n\n🏷️<b>__NAMA:__</b> {title} \n💡<b>__Durasi:__</b> {duration_min} \n🎧<b>__Permintaan:__ </b> {mention} \n**[Bot Eror? Contact Here!](https://t.me/zenzuzu2)**",
                 )
                 await start_timer(
                     videoid,
