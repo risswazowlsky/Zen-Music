@@ -158,7 +158,7 @@ async def play(_, message: Message):
         buttons = url_markup2(videoid, duration_min, message.from_user.id)
         return await message.reply_photo(
             photo=thumb,
-            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins\n__[☕Contact Owner](https://t.me/zenzuzu2)__\n__[🔎Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins\n__[☕「Contact Owner」](https://t.me/zenzuzu2)__\n__[🔎Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
@@ -169,7 +169,7 @@ async def play(_, message: Message):
             await message.reply_photo(
                 photo="Utils/IMG_20220207_221016_236.jpg",
                 caption=(
-                    "**Usage:** /play [Nama Lagu]\n\n*NOTE:Jangan spam lagu, nanti eror**"
+                    "**Usage:** /play [Nama Lagu]\n\n**NOTE:Jangan spam lagu, nanti eror**"
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -189,7 +189,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins\n__[☕Contact Owner](https://t.me/zenzuzu2)__\n__[🔎Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins\n__[☕「Contact Owner」](https://t.me/zenzuzu2)__\n__[🔎Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -232,7 +232,7 @@ async def Music_Stream(_, CallbackQuery):
         )
     await CallbackQuery.answer(f"Processing:- {title[:20]}", show_alert=True)
     mystic = await CallbackQuery.message.reply_text(
-        f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+        f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ░░░░░░░░░░░ 100%"
     )
     downloaded_file = await loop.run_in_executor(
         None, download, videoid, mystic, title
@@ -400,7 +400,7 @@ async def slider_query_results(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins\n__[☕Contact Owner](https://t.me/zenzuzu2)__\n__[🔎Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins\n**[☕「Contact Owner」](https://t.me/zenzuzu2)**\n__[🔎Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
