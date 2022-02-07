@@ -87,7 +87,7 @@ async def initiate_bot():
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "__✅Bot Music Sudah Online__\n\n<b>[「Contact Owner」](https://t.me/zenzuzu2)</b>",
+            "__✅Bot Music Sudah Online__",
         )
     except Exception as e:
         print(
@@ -106,7 +106,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "__✅Asisten Sudah Online__\n\n<b>[「Contact Owner」](https://t.me/zenzuzu2)</b>",
+                "__✅Asisten Sudah Online__",
             )
         except Exception as e:
             print(
