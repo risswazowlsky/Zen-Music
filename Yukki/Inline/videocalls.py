@@ -6,17 +6,17 @@ def choose_markup(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🎵 Play Music",
+                text="𝘔𝘶𝘴𝘪𝘤",
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🎥 Play Video",
+                text="𝘝𝘪𝘥𝘦𝘰",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🗑 Close Search",
+                text="𝘊𝘓𝘖𝘚𝘌",
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
