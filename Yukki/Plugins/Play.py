@@ -169,7 +169,7 @@ async def play(_, message: Message):
             await message.reply_photo(
                 photo="Utils/IMG_20220207_221016_236.jpg",
                 caption=(
-                    "**Usage:** /play [Nama Lagu]\n\n
+                    "**Usage:** /play [Nama Lagu]
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
