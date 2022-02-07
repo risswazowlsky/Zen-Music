@@ -87,7 +87,7 @@ async def initiate_bot():
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>Congrats!! Music Bot has started successfully!</b>",
+            "<b>Anjir cok, Zenzu Music udah kembali online</b>",
         )
     except Exception as e:
         print(
@@ -106,7 +106,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 1  has started successfully!</b>",
+                "<b>Bot Sudah Kembali Hidup.</b>",
             )
         except Exception as e:
             print(
@@ -364,7 +364,7 @@ async def start_command(_, message):
         umention = f"[{sender_name}](tg://user?id={int(sender_id)})"
         return await LOG_CLIENT.send_message(
             LOG_GROUP_ID,
-            f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+            f"{message.from_user.mention} Terimakasih sudah memakai aku.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
         )
     return
 
@@ -373,7 +373,7 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name} thanks for using Genius Music❗,
+        """Hello {first_name} thanks for using Zenzu Music❗,
 
 Click on the buttons for more information.
 
