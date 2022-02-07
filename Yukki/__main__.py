@@ -87,7 +87,7 @@ async def initiate_bot():
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>Anjir cok, Zenzu Music udah kembali online</b>",
+            "<b>{BOT_NAME} Sudah aktif</b>",
         )
     except Exception as e:
         print(
@@ -106,7 +106,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "<b>Bot Sudah Kembali Hidup.</b>",
+                "<b>Asisten {BOT_NAME} sudah aktif.</b>",
             )
         except Exception as e:
             print(
@@ -115,8 +115,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_1.join_chat("OfficialYukki")
-            await ASS_CLI_1.join_chat("YukkiSupport")
+            await ASS_CLI_1.join_chat("Market_Userbot")
+            await ASS_CLI_1.join_chat("Markettblack")
         except:
             pass
         console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
@@ -373,7 +373,7 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name} thanks for using Zenzu Music❗,
+        """Hello {first_name} thanks for using {BOT_NAME}❗,
 
 Click on the buttons for more information.
 
