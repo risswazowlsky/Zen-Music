@@ -87,7 +87,7 @@ async def initiate_bot():
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>{BOT_NAME} Sudah aktif</b>",
+            "<b>✅{BOT_NAME} Sudah Online</b>",
         )
     except Exception as e:
         print(
@@ -106,7 +106,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "<b>Asisten {BOT_NAME} sudah aktif.</b>",
+                "<b>✅Asisten Sudah Online.</b>",
             )
         except Exception as e:
             print(
