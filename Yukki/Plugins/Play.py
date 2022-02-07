@@ -169,7 +169,7 @@ async def play(_, message: Message):
             await message.reply_photo(
                 photo="Utils/IMG_20220207_221016_236.jpg",
                 caption=(
-                    "**Usage:** /play [Nama Lagu]\n\n__*JANGAN SPAM PLAY YA!*__
+                    "**Usage:** /play [Nama Lagu]\n\n**NOTE:**Jangan spam lagu, nanti bot delay
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
