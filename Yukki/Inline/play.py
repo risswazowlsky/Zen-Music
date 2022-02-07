@@ -215,9 +215,9 @@ def primary_markup(videoid, user_id, current_time, total_time):
         ],
         [
             InlineKeyboardButton(
-                text="𝘔𝘖𝘙𝘌-𝚁𝙴𝚂𝚄𝙻𝚃", callback_data=f"other {videoid}|{user_id}"
+                text="𝘔𝘖𝘙𝘌", callback_data=f"other {videoid}|{user_id}"
             ),
-            InlineKeyboardButton(text=·𝘊𝘓𝘖𝘚𝘌", callback_data=f"close"),
+            InlineKeyboardButton(text="𝘊𝘓𝘖𝘚𝘌", callback_data=f"close"),
         ],
     ]
     return buttons
@@ -239,7 +239,7 @@ def timer_markup(videoid, user_id, current_time, total_time):
         ],
         [
             InlineKeyboardButton(
-                text="𝘔𝘖𝘙𝘌-𝚁𝙴𝚂𝚄𝙻𝚃", callback_data=f"other {videoid}|{user_id}"
+                text="𝘔𝘖𝘙𝘌", callback_data=f"other {videoid}|{user_id}"
             ),
             InlineKeyboardButton(text="𝘊𝘓𝘖𝘚𝘌", callback_data=f"close"),
         ],
