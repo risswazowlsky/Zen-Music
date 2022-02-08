@@ -106,7 +106,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "__✅Asisten Sudah Online__",
+                "__✨Asisten Sudah Online__",
             )
         except Exception as e:
             print(
