@@ -118,7 +118,7 @@ async def start_live_stream(
     await add_active_chat(CallbackQuery.message.chat.id)
     await add_active_video_chat(CallbackQuery.message.chat.id)
     buttons = secondary_markup2(videoid, CallbackQuery.from_user.id)
-    cap = f"**Live Streaming**\n\n🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Infomation:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention} \n💜<b>**Powered:**</b> [Zenzu](https://t.me/zenzuzu2)""
+    cap = f"**Live Streaming**\n\n🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Infomation:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention} \n💜<b>**Powered:**</b> [Zenzu](https://t.me/zenzuzu2)"
     final_output = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),
