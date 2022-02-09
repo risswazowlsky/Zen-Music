@@ -70,7 +70,7 @@ async def admin_risghts(_, CallbackQuery):
         await music_off(chat_id)
         await pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"🤨 NGAPAIN DI PAUSE? {CallbackQuery.from_user.mention}!",
+            f"🎧 Voicechat Paused by {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -83,7 +83,7 @@ async def admin_risghts(_, CallbackQuery):
         await music_on(chat_id)
         await resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"🤨 Resume by: {CallbackQuery.from_user.mention}!",
+            f"🎧 Voicechat Resumed by {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -101,7 +101,7 @@ async def admin_risghts(_, CallbackQuery):
         await remove_active_video_chat(chat_id)
         await stop_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"💡 Music berhenti: {CallbackQuery.from_user.mention}!",
+            f"🎧 Voicechat End/Stopped by {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -121,7 +121,7 @@ async def admin_risghts(_, CallbackQuery):
             await stop_stream(chat_id)
             await CallbackQuery.message.delete()
             await CallbackQuery.answer(
-                "Skipped. Tidak ada lagu di antrian", show_alert=True
+                "Skipped. No more music in Queue", show_alert=True
             )
             return
         else:
@@ -167,7 +167,7 @@ async def admin_risghts(_, CallbackQuery):
                 final_output = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>✨__Skipped Voice Chat__</b>\n\n🏷️<b>__NAMA:__</b> {title} \n💡<b>__Durasi:__</b> {duration_min} \n🎧<b>__Permintaan:__ </b> {mention} ",
+                    caption=f"<b>__#️⃣Skipped__</b>\n\n🎧<b>__Memulai:__</b> {title} \n💡<b>__Durasi:__</b> {duration_min} \n👤<b>Permintaan: </b> {mention}",
                 )
                 await start_timer(
                     videoid,
@@ -204,7 +204,7 @@ async def admin_risghts(_, CallbackQuery):
                         photo="Utils/Telegram.JPEG",
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>✨__Skipped Video Chat__</b>\n\n🎧**__Permintaan:__** {mention}"
+                            f"<b>__#️⃣Skipped__</b>\n\n🏷️**Permintaan:** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -244,7 +244,7 @@ async def admin_risghts(_, CallbackQuery):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n🏷️<b>__Nama:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n🎧**__Permintaan:__** {mention}"
+                            f"<b>__#️⃣Skipped__</b>\n\n🎧<b>**Memulai:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n🏷️**Permintaan:** {mention}"
                         ),
                     )
                     os.remove(thumb)
@@ -272,7 +272,7 @@ async def admin_risghts(_, CallbackQuery):
                     thumbnail,
                 ) = get_yt_info_id(videoid)
                 await mystic.edit(
-                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Nama:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
@@ -302,7 +302,7 @@ async def admin_risghts(_, CallbackQuery):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🏷️<b>__Nama:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Durasi:__</b> {duration_min} Mins\n🎧**__Permintaan:__** {mention}"
+                        f"<b>__#️⃣Skipped__</b>\n\n🎧<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Durasi:__</b> {duration_min} Mins\n🏷️**Permintaan:** {mention}"
                     ),
                 )
                 os.remove(thumb)
@@ -411,7 +411,7 @@ async def play_playlist(_, CallbackQuery):
                     thumbnail,
                 ) = get_yt_info_id(videoid)
                 mystic = await mystic.edit(
-                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Judul:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
@@ -446,7 +446,7 @@ async def play_playlist(_, CallbackQuery):
                 got_queue.append(to_append)
                 await music_on(chat_id)
                 await add_active_chat(chat_id)
-                cap = f"🏷️<b>__Nama:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid})\n🎧**__Permintaan:__** {CallbackQuery.from_user.mention}"
+                cap = f"🎥<b>__Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {CallbackQuery.from_user.mention}"
                 final_output = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
