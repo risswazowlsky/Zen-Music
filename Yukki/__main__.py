@@ -87,7 +87,7 @@ async def initiate_bot():
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "__✅Bot Music Sudah Online__",
+            "__💡Bot Music Sudah Online__",
         )
     except Exception as e:
         print(
@@ -229,11 +229,11 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""────────────────────────,
-*Saya adalah {BOT_NAME} Bisa Memutar Lagu Dengan Mudah*.
-────────────────────────.
+home_text_pm = f"""────────────────────────
+Saya adalah {BOT_NAME} Bisa Memutar Lagu Dengan Mudah.
+────────────────────────
 
-Semua Perintah {BOT_NAME}: / """
+➤ Semua Perintah {BOT_NAME}: / """
 
 
 @app.on_message(filters.command("help") & filters.private)
