@@ -10,12 +10,12 @@ from rich.console import Console
 from rich.table import Table
 from youtubesearchpython import VideosSearch
 
-from config import (LOG_GROUP_ID, LOG_SESSION, STRING1, STRING2, STRING3,
-                    STRING4, STRING5)
+from config import (LOG_GROUP_ID, LOG_SESSION, STRING1, STRING2,
+                    STRING3, STRING4, STRING5)
 from Yukki import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    ASSID1, ASSID2, ASSID3, ASSID4, ASSID5, ASSNAME1, ASSNAME2,
                    ASSNAME3, ASSNAME4, ASSNAME5, BOT_ID, BOT_NAME, LOG_CLIENT,
-                   OWNER_ID, app)
+                   OWNER_ID, SUDOERS, app, random_assistant)
 from Yukki.Core.Clients.cli import LOG_CLIENT
 from Yukki.Core.PyTgCalls.Yukki import (pytgcalls1, pytgcalls2, pytgcalls3,
                                         pytgcalls4, pytgcalls5)
@@ -30,7 +30,7 @@ try:
     from config import START_IMG_URL
 except:
     START_IMG_URL = None
-   
+
 loop = asyncio.get_event_loop()
 console = Console()
 HELPABLE = {}
@@ -40,6 +40,12 @@ async def initiate_bot():
     with console.status(
         "[magenta] Finalizing Booting...",
     ) as status:
+        ass_count = len(random_assistant)
+        if ass_count == 0:
+            console.print(
+                f"\n[red] No Assistant Clients Vars Defined!.. Exiting Process"
+            )
+            return
         try:
             chats = await get_active_video_chats()
             for chat in chats:
@@ -92,7 +98,7 @@ async def initiate_bot():
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "__💡Bot Music Sudah Online__",
+            "<b>Congrats!! Music Bot has started successfully!</b>",
         )
     except Exception as e:
         print(
@@ -111,7 +117,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "__✨Asisten Sudah Online__",
+                "<b>Congrats!! Assistant Client 1  has started successfully!</b>",
             )
         except Exception as e:
             print(
@@ -120,8 +126,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_1.join_chat("Market_Userbot")
-            await ASS_CLI_1.join_chat("Markettblack")
+            await ASS_CLI_1.join_chat("OfficialYukki")
+            await ASS_CLI_1.join_chat("YukkiSupport")
         except:
             pass
         console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
@@ -233,12 +239,15 @@ async def initiate_bot():
     await idle()
     console.print(f"\n[red]Stopping Bot")
 
-home_text_pm = f"""╔═══════════════╗ 
-╠   {BOT_NAME} 
-╚═══════════════╝
+
+home_text_pm = f"""Hello ,
+╔══════════╗ 
+╠ {BOT_NAME} 
+╚══════════╝
 ────────────────────────
 ✅Bot Musik OP! : {BOT_NAME}
-✨Powered By : @Zenuzu2
+✨Bot Bisa Memutar Musik.
+💜Silakan Di Pakai
 ────────────────────────
 
 ➤ Semua Perintah {BOT_NAME}: / """
@@ -362,17 +371,24 @@ async def start_command(_, message):
                 )
             return
     out = private_panel()
-    await message.reply_text(
-        home_text_pm,
-        reply_markup=InlineKeyboardMarkup(out[1]),
-    )
+    if START_IMG_URL is None:
+        await message.reply_text(
+            home_text_pm,
+            reply_markup=InlineKeyboardMarkup(out[1]),
+        )
+    else:
+        await message.reply_photo(
+            photo=START_IMG_URL,
+            caption=home_text_pm,
+            reply_markup=InlineKeyboardMarkup(out[1]),
+        )
     if await is_on_off(5):
         sender_id = message.from_user.id
         sender_name = message.from_user.first_name
         umention = f"[{sender_name}](tg://user?id={int(sender_id)})"
         return await LOG_CLIENT.send_message(
             LOG_GROUP_ID,
-            f"{message.from_user.mention} Terimakasih sudah memakai aku.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+            f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
         )
     return
 
@@ -381,7 +397,7 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name} thanks for using {BOT_NAME}❗,
+        """Hello {first_name},
 
 Click on the buttons for more information.
 
@@ -397,6 +413,15 @@ All commands can be used with: /
 async def shikhar(_, CallbackQuery):
     text, keyboard = await help_parser(CallbackQuery.from_user.mention)
     await CallbackQuery.message.edit(text, reply_markup=keyboard)
+
+
+@app.on_callback_query(filters.regex("search_helper_mess"))
+async def search_helper_mess(_, CallbackQuery):
+    await CallbackQuery.message.delete()
+    text, keyboard = await help_parser(CallbackQuery.from_user.mention)
+    await app.send_message(
+        CallbackQuery.message.chat.id, text, reply_markup=keyboard
+    )
 
 
 @app.on_callback_query(filters.regex(r"help_(.*?)"))
@@ -415,6 +440,15 @@ All commands can be used with: /
  """
     if mod_match:
         module = mod_match.group(1)
+        if str(module) == "sudousers":
+            userid = query.from_user.id
+            if userid in SUDOERS:
+                pass
+            else:
+                return await query.answer(
+                    "This Button can only be accessed by SUDO USERS",
+                    show_alert=True,
+                )
         text = (
             "{} **{}**:\n".format(
                 "Here is the help for", HELPABLE[module].__MODULE__
