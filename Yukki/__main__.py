@@ -233,7 +233,6 @@ async def initiate_bot():
     await idle()
     console.print(f"\n[red]Stopping Bot")
 
-START_IMAGE_URL = https://telegra.ph/file/feb602cf2dd497cd3475f.jpg
 home_text_pm = f"""╔═══════════════╗ 
 ╠   {BOT_NAME} 
 ╚═══════════════╝
