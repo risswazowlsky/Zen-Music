@@ -229,8 +229,12 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""────────────────────────
-Saya adalah {BOT_NAME} Bisa Memutar Lagu Dengan Mudah.
+home_text_pm = f"""╔═══════════════╗ 
+╠   {BOT_NAME} 
+╚═══════════════╝
+────────────────────────
+✅*BOT MUSIK* : {BOT_NAME}
+➤ *TAMBAHKAN SAYA DAN MARI MUSIKAN*
 ────────────────────────
 
 ➤ Semua Perintah {BOT_NAME}: / """
