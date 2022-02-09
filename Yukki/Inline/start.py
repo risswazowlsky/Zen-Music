@@ -163,7 +163,7 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="💡 Help Menu", callback_data="shikhar"
+                    text="💡 Command Music", callback_data="shikhar"
                 ),
             ],
             [
@@ -174,10 +174,10 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="➕ Channel", url=f"{SUPPORT_CHANNEL}"
+                    text="✨Channel", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="➕ Group", url=f"{SUPPORT_GROUP}"
+                    text="✨Group", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
