@@ -189,7 +189,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins \n__[❤️「Contact Owner」](https://t.me/zenzuzu2)__\n__[🔎Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins \n**[💜Contact Owner](https://t.me/zenzuzu2)**\n**[✨Music Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -232,7 +232,7 @@ async def Music_Stream(_, CallbackQuery):
         )
     await CallbackQuery.answer(f"Processing:- {title[:20]}", show_alert=True)
     mystic = await CallbackQuery.message.reply_text(
-        f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {Judul[:50]}\n\n0% ┈─╼╾─┈┈─╼ 100%"
+        f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
     )
     downloaded_file = await loop.run_in_executor(
         None, download, videoid, mystic, title
