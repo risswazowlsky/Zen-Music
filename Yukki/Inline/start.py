@@ -163,12 +163,12 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="💡 Command Music", callback_data="shikhar"
+                    text="💡 Command Help", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    "➕ Add me to your Group",
+                    "➤ Add me to your Group",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                 )
             ],
