@@ -233,8 +233,8 @@ home_text_pm = f"""╔═══════════════╗
 ╠   {BOT_NAME} 
 ╚═══════════════╝
 ────────────────────────
-✅*BOT MUSIK* : {BOT_NAME}
-➤ *TAMBAHKAN SAYA DAN MARI MUSIKAN*
+✅Bot Musik OP! : {BOT_NAME}
+✨Powered By : @Zenuzu2
 ────────────────────────
 
 ➤ Semua Perintah {BOT_NAME}: / """
