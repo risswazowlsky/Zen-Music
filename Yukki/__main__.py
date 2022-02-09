@@ -98,7 +98,7 @@ async def initiate_bot():
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>Congrats!! Music Bot has started successfully!</b>",
+            "__💡Bot Music Sudah Online__",
         )
     except Exception as e:
         print(
@@ -117,7 +117,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 1  has started successfully!</b>",
+                "__✨Asisten Sudah Online!__",
             )
         except Exception as e:
             print(
