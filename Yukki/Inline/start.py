@@ -1,7 +1,7 @@
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaPhoto, Message)
 
-from config import MUSIC_BOT_NAME, SUPPORT_CHANNEL, SUPPORT_GROUP, OWNER_BOT
+from config import MUSIC_BOT_NAME, SUPPORT_CHANNEL, SUPPORT_GROUP, OWNER_ID
 from Yukki import BOT_USERNAME
 
 
