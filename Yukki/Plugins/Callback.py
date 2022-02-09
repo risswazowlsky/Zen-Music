@@ -83,7 +83,7 @@ async def admin_risghts(_, CallbackQuery):
         await music_on(chat_id)
         await resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"🤨 NGAPAIN DI RESUME? {CallbackQuery.from_user.mention}!",
+            f"🤨 Resume by: {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -101,7 +101,7 @@ async def admin_risghts(_, CallbackQuery):
         await remove_active_video_chat(chat_id)
         await stop_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"🧐 STAP STOP MULU {CallbackQuery.from_user.mention}!",
+            f"💡 Music berhenti: {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
