@@ -172,7 +172,7 @@ async def start_video_stream(
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=(
-                f"🎬<b>Video:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤<b>__Requested by:__ </b>{CallbackQuery.from_user.mention} \n🚧<b>__ Video Queued at:__</b> <b>#{position}!</b>"
+                f"🏷️<b>Video:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>**Durasi:** </b> {duration_min} \n✨<b>Information: </b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨<b>Permintaan: </b>{CallbackQuery.from_user.mention} \n#️⃣<b>**Antrian:</b> <b>#{position}!</b>"
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -200,7 +200,7 @@ async def start_video_stream(
         buttons = primary_markup(
             videoid, CallbackQuery.from_user.id, duration_min, duration_min
         )
-        cap = f"**Video Streaming**\n\n🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Infomation:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention} \n💜<b>**Powered:**</b> [Zenzu](https://t.me/zenzuzu2)""
+        cap = f"**Video Streaming**\n\n🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Infomation:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention} \n💜<b>**Powered:**</b> [Zenzu](https://t.me/zenzuzu2)"
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
