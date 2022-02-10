@@ -83,20 +83,20 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="⚡ Helper Commands Menu", callback_data="shikhar"
+                    text="💡 Bantuan & Perintah", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🤚 Settings", callback_data="settingm"
+                    text="⛔ Setting", callback_data="settingm"
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="✨Official Channel✨", url=f"{SUPPORT_CHANNEL}"
+                    text="🎧 My Channel", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="✨Support Group✨", url=f"{SUPPORT_GROUP}"
+                    text="🎧 My Groups", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -108,12 +108,12 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="⚡ Helper Commands Menu", callback_data="shikhar"
+                    text="💡 Bantuan & Perintah", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    "➕ Add me to your Group",
+                    "➕ Tambahkan ke Grup ➕",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 )
             ],
@@ -123,18 +123,18 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="⚡ Helper Commands Menu", callback_data="shikhar"
+                    text="💡 Bantuan & Perintah", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    "➕ Add me to your Group",
+                    "➕ Tambahkan ke Grup ➕",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="✨Support Group✨", url=f"{SUPPORT_GROUP}"
+                    text="🎧 My Groups", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -143,18 +143,18 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="⚡ Helper Commands Menu", callback_data="shikhar"
+                    text="💡 Bantuan & Perintah", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    "➕ Add me to your Group",
+                    "➕ Tambahkan ke Grup ➕",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="✨Official Channel✨", url=f"{SUPPORT_CHANNEL}"
+                    text="🎧 My Channel", url=f"{SUPPORT_CHANNEL}"
                 ),
             ],
         ]
@@ -163,21 +163,21 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="💡 Command Help", callback_data="shikhar"
+                    text="💡 Bantuan & Perintah", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    "➤ Add me to your Group",
+                    "➕ Tambahkan ke Grup ➕",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="✨Channel", url=f"{SUPPORT_CHANNEL}"
+                    text="🎧 My Channel", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="✨Group", url=f"{SUPPORT_GROUP}"
+                    text="🎧 My Groups", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
