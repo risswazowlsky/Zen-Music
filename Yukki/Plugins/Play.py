@@ -167,7 +167,7 @@ async def play(_, message: Message):
                 message.from_user.first_name, message.from_user.id, "abcd"
             )
             await message.reply_photo(
-                photo="Utils/IMG_20220207_221016_236.jpg",
+                photo="Utils/Playlist.jpg",
                 caption=(
                     "**Usage:** /play [Nama Lagu]\n\n**NOTE: Jangan spam lagu, nanti eror**"
                 ),
@@ -189,7 +189,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins \n**[💜Contact Owner](https://t.me/zenzuzu2)**\n**[✨Music Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**",
+            caption=f"🎧Song: **{title}\n\n💡Durasi:** {duration_min} Mins \n**[✨Permintaan](CallbackQuery.from_user.mention.)**\n**[💛Powered:](https://t.me/{BOT_USERNAME}?start=info_{videoid})**",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
