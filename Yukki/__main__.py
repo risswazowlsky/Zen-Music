@@ -240,15 +240,11 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""
- ───•[Swain Robot](https://t.me/Swainrobot)•───
-*Hello {}
-────────────────────────
-Swain a powerful group management bot built to help you manage your group!
-────────────────────
-{BOT_NAME} Can playing music
+home_text_pm = f"""Hello ,
+My name is {BOT_NAME}.
+A Telegram Management Groups+Video Music Streaming bot with some useful features.
 
-➤ Semua Perintah {BOT_NAME}: / """
+➤ All commands can be used with: / """
 
 
 @app.on_message(filters.command("help") & filters.private)
