@@ -189,7 +189,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"🎧Song: **{title}\n\n**💡Durasi:** {duration_min} Mins \n**[✨Permintaan](CallbackQuery.from_user.mention.)**\n**💛Powered:** {BOT_NAME}",
+            caption=f"🎧Song: **{title}\n\n**💡Durasi:** {duration_min} Mins \n**[✨Permintaan](CallbackQuery.from_user.mention)**\n**💛Powered:** {BOT_NAME}",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
