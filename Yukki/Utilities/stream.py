@@ -59,7 +59,7 @@ async def start_stream(
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=(
-                f"🏷️<b>**Judul:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>**Durasi:**</b> {duration_min} \n✨<b>**Information:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨<b>**Permintaan:** </b>{CallbackQuery.from_user.mention} \n\n#️⃣<b>**Antrian:**</b> <b>#{position}!</b>"
+                f"🏷️<b>**Lagu:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>**Durasi:**</b> {duration_min} \n✨<b>**Information:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨<b>**Permintaan:** </b>{CallbackQuery.from_user.mention} \n\n#️⃣<b>**Antrian:**</b> <b>#{position}!</b>"
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -83,7 +83,7 @@ async def start_stream(
             videoid, CallbackQuery.from_user.id, duration_min, duration_min
         )
         await mystic.delete()
-        cap = f"🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Information:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention}\n💛<b>**Powered:** {BOT_NAME}"
+        cap = f"🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Information:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention}\n⚡<b>**Powered:** {BOT_NAME}"
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
