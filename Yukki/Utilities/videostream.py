@@ -52,7 +52,7 @@ async def start_stream_video(message, file, title, mystic):
         final_output = await message.reply_photo(
             photo="Utils/Telegram.JPEG",
             caption=(
-                f"🎬<b>__Video:__ </b> [Given Video Via Telegram]({link})\n\n👤<b>__Requested by:__ </b>{message.from_user.mention} \n🚧<b>__Queued at:__</b> <b>#{position}!</b>"
+                f"🏷️<b>**Video:** </b> [Berikan saya audio / link lagu]({link})\n\n✨<b>**Permintaan:** </b>{message.from_user.mention} \n\n#️⃣<b>**Antrian:</b> <b>#{position}!</b>"
             ),
             reply_markup=audio_markup2,
         )
@@ -75,7 +75,7 @@ async def start_stream_video(message, file, title, mystic):
         await add_active_video_chat(message.chat.id)
         buttons = secondary_markup2("Smex1", message.from_user.id)
         await mystic.delete()
-        cap = f"🏷️<b>Memutar: </b>[Given Video Via Telegram]({link})\n👤**__Requested by:__** {message.from_user.mention}"
+        cap = f"🏷️<b>Memutar: </b>[Berikan saya video / link video]({link})\n✨**Permintaan:** {message.from_user.mention}"
         final_output = await message.reply_photo(
             photo="Utils/Telegram.JPEG",
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -118,7 +118,7 @@ async def start_live_stream(
     await add_active_chat(CallbackQuery.message.chat.id)
     await add_active_video_chat(CallbackQuery.message.chat.id)
     buttons = secondary_markup2(videoid, CallbackQuery.from_user.id)
-    cap = f"**Live Streaming**\n\n🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Infomation:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention} \n💜<b>**Powered:**</b> [Swain Robot](https://t.me/Swainrobot)"
+    cap = f"**Live Streaming**\n\n🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💢<b>__Infomation:__</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention} \n💛<b>**Powered:**</b> [Zenzu](https://t.me/Zenzuzu2)"
     final_output = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),
@@ -172,7 +172,7 @@ async def start_video_stream(
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=(
-                f"🏷️<b>Video:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>**Durasi:** </b> {duration_min} \n✨<b>Information: </b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨<b>Permintaan: </b>{CallbackQuery.from_user.mention} \n#️⃣<b>**Antrian:</b> <b>#{position}!</b>"
+                f"🏷️<b>Video:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>**Durasi:** </b> {duration_min} \n✨<b>Information: </b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨<b>Permintaan: </b>{CallbackQuery.from_user.mention} \n\n#️⃣<b>**Antrian:</b> <b>#{position}!</b>"
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -200,7 +200,7 @@ async def start_video_stream(
         buttons = primary_markup(
             videoid, CallbackQuery.from_user.id, duration_min, duration_min
         )
-        cap = f"**Video Streaming**\n\n🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Infomation:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention} \n💜<b>**Powered:**</b> [Swain Robot](https://t.me/Swainrobot)"
+        cap = f"**Video Streaming**\n\n🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Infomation:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention} \n💛<b>**Powered by:**</b> [Zenzu](https://t.me/Zenzuzu2)"
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
