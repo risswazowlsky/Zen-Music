@@ -242,11 +242,12 @@ async def initiate_bot():
 
 home_text_pm = f"""
  ───•[Swain Robot](https://t.me/Swainrobot)•───
-*Hello {} !*
+*Hello {}
 ────────────────────────
 Swain a powerful group management bot built to help you manage your group!
 ────────────────────
 Swain Robot can also play song
+
 
 ➤ Semua Perintah {BOT_NAME}: / """
 
