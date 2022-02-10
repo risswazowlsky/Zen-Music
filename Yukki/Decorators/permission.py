@@ -10,10 +10,10 @@ def PermissionCheck(mystic):
         a = await app.get_chat_member(message.chat.id, BOT_ID)
         if a.status != "administrator":
             return await message.reply_text(
-                "I need to be admin with some permissions:\n"
-                + "\n- **can_manage_voice_chats:** To manage voice chats"
-                + "\n- **can_delete_messages:** To delete Bot's Searched Waste"
-                + "\n- **can_invite_users**: For inviting assistant to chat."
+                "Saya harus menjadi admin agar bisa musikan:\n"
+                + "\n- **Berikan Saya Izin Mengelola VCG/OS:**"
+                + "\n- **Berikan Saya Izin Menghapus Pesan:**"
+                + "\n- **Berikan Saya Izin Add Admin**: Untuk Mengundang Asisten"
             )
         if not a.can_manage_voice_chats:
             await message.reply_text(
