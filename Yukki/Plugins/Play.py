@@ -158,7 +158,7 @@ async def play(_, message: Message):
         buttons = url_markup2(videoid, duration_min, message.from_user.id)
         return await message.reply_photo(
             photo=thumb,
-            caption=f"🏷️Lagu: **{title}\n\n**💡Durasi:** {duration_min} Mins \n**[✨Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})** \n💜<b>**Powered:**</b> [Zenzu](https://t.me/zenzuzu2)",
+            caption=f"🏷️Lagu: **{title}\n\n**💡Durasi:** {duration_min} Mins \n**[✨Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})** \n⚡<b>**Powered:**</b> {BOT_NAME}",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
@@ -189,7 +189,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"**🏷️Lagu:** **{title}\n\n**💡Durasi:** {duration_min} Mins \n**✨Information** [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid}) \n**⚡Powered:** {BOT_NAME}",
+            caption=f"**🏷️Lagu:** **{title}\n\n<b>**💡Durasi:**</b> {duration_min} Mins \n<b>**✨Information**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid}) \n<b>**⚡Powered:**</b> {BOT_NAME}",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
