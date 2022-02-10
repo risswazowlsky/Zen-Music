@@ -240,11 +240,11 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""Hello ,
+home_text_pm = f"""Hello,
 My name is {BOT_NAME}.
-A Telegram Management Groups+Video Music Streaming bot with some useful features.
-
-➤ All commands can be used with: / """
+𝘈 𝘛𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘔𝘶𝘴𝘪𝘤+𝘝𝘪𝘥𝘦𝘰 𝘚𝘵𝘳𝘦𝘢𝘮𝘪𝘯𝘨 𝘣𝘰𝘵 𝘸𝘪𝘵𝘩 𝘴𝘰𝘮𝘦 𝘶𝘴𝘦𝘧𝘶𝘭 𝘧𝘦𝘢𝘵𝘶𝘳𝘦𝘴.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+➤ 𝘈𝘭𝘭 𝘊𝘰𝘮𝘮𝘢𝘯𝘥 𝘤𝘢𝘯 𝘶𝘴𝘦 𝘪𝘴 𝘞𝘪𝘵𝘩: / """
 
 
 @app.on_message(filters.command("help") & filters.private)
