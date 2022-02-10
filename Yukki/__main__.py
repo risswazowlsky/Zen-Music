@@ -246,8 +246,7 @@ home_text_pm = f"""
 ────────────────────────
 Swain a powerful group management bot built to help you manage your group!
 ────────────────────
-Swain Robot can also play song
-
+{BOT_NAME} Can playing music
 
 ➤ Semua Perintah {BOT_NAME}: / """
 
