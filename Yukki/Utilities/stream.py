@@ -5,7 +5,7 @@ import shutil
 from pyrogram.types import InlineKeyboardMarkup
 
 from config import get_queue
-from Yukki import BOT_USERNAME, db_mem
+from Yukki import BOT_NAME, BOT_USERNAME, db_mem
 from Yukki.Core.PyTgCalls import Queues
 from Yukki.Core.PyTgCalls.Yukki import join_stream
 from Yukki.Database import (add_active_chat, add_active_video_chat,
@@ -83,7 +83,7 @@ async def start_stream(
             videoid, CallbackQuery.from_user.id, duration_min, duration_min
         )
         await mystic.delete()
-        cap = f"🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Information:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention}\n💛<b>**Powered:**</b> [Zenzu](https://t.me/zenzuzu2)"
+        cap = f"🏷️<b>**Memutar:** </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n✨<b>**Information:**</b> [YouTube](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n✨**Permintaan:** {CallbackQuery.from_user.mention}\n💛<b>**Powered:** {BOT_NAME}"
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
