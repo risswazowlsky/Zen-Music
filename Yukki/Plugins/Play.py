@@ -7,7 +7,7 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
 from youtube_search import YoutubeSearch
 
 import Yukki
-from Yukki import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
+from Yukki import (BOT_NAME, BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
                    MUSIC_BOT_NAME, app, db_mem)
 from Yukki.Core.PyTgCalls.Converter import convert
 from Yukki.Core.PyTgCalls.Downloader import download
@@ -189,7 +189,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"🎧Song: **{title}\n\n**💡Durasi:** {duration_min} Mins \n**[✨Permintaan](CallbackQuery.from_user.mention.)**\n**💛Powered:** (https://t.me/{BOT_USERNAME}?start=info_{videoid})",
+            caption=f"🎧Song: **{title}\n\n**💡Durasi:** {duration_min} Mins \n**[✨Permintaan](CallbackQuery.from_user.mention.)**\n**💛Powered:** {BOT_NAME}",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
